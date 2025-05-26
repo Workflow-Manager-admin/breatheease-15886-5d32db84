@@ -55,7 +55,7 @@ export class BreatheEaseMainComponent {
 
   runCountdown() {
     if (this.countdown > 0) {
-      this.timer = setTimeout(() => {
+      this.timer = window.setTimeout(() => {
         this.countdown--;
         this.runCountdown();
       }, 1000);
@@ -67,14 +67,14 @@ export class BreatheEaseMainComponent {
 
   startHolding() {
     this.testStartTime = Date.now();
-    this.timer = setInterval(() => { }, 1000); // Timer running in background
+    this.timer = window.setInterval(() => { }, 1000); // Timer running in background
   }
 
   // PUBLIC_INTERFACE
   finishTest() {
     if (this.testStep === 'hold' && this.testStartTime) {
       const duration = Math.round((Date.now() - this.testStartTime) / 1000);
-      clearInterval(this.timer);
+      window.clearInterval(this.timer);
       this.testStep = 'result';
       this.boltResult = duration;
       this.testStartTime = null;
@@ -96,13 +96,13 @@ export class BreatheEaseMainComponent {
   // --- Score Storage (local, could be upgraded to backend) ---
   loadScores(): Array<{ date: string, score: number }> {
     try {
-      const s = localStorage.getItem('boltScores');
+      const s = window.localStorage.getItem('boltScores');
       return s ? JSON.parse(s) : [];
     } catch { return []; }
   }
 
   saveScores() {
-    localStorage.setItem('boltScores', JSON.stringify(this.boltScores));
+    window.localStorage.setItem('boltScores', JSON.stringify(this.boltScores));
   }
 
   // PUBLIC_INTERFACE
