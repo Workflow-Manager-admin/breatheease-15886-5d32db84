@@ -737,3 +737,235 @@ Application bundle generation failed. [2.008 seconds]
          ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [2.362 seconds]
+
+▲ [WARNING] TS-998113: RouterOutlet is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:11:12:
+      11 │   imports: [RouterOutlet, BreatheEaseMainComponent],
+         ╵             ~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:10:12:
+      10 │   <section *ngIf="currentTab==='test'" class="be-section">
+         ╵             ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:11:10:
+      11 │     <div *ngIf="testStep === 'intro'" class="be-block center">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:16:10:
+      16 │     <div *ngIf="testStep === 'instructions'" class="be-block">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:27:10:
+      27 │     <div *ngIf="testStep==='countdown'" class="be-block center">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:32:10:
+      32 │     <div *ngIf="testStep==='hold'" class="be-block center">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:40:10:
+      40 │     <div *ngIf="testStep==='result'" class="be-block center">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:48:12:
+      48 │   <section *ngIf="currentTab==='history'" class="be-section">
+         ╵             ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:50:10:
+      50 │     <div *ngIf="boltScores.length > 0; else noScores">
+         ╵           ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:52:14:
+      52 │         <div *ngFor="let score of boltScores" class="be-history-it...
+         ╵               ~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:61:14:
+      61 │           <g *ngIf="chartData.length">
+         ╵               ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:62:27:
+      62 │             <ng-container *ngFor="let score of chartData; index as...
+         ╵                            ~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:84:12:
+      84 │   <section *ngIf="currentTab==='insights'" class="be-section">
+         ╵             ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngStyle' since it isn't a known property of 'div'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:2:21:
+      2 │ ...="be-main" [ngStyle]="{'background': palette.secondary, 'color':...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'Date' does not exist on type 'BreatheEaseMainComponent'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:35:55:
+      35 │ ...-timer">{{ (testStartTime ? ((Date.now()-testStartTime)/1000).t...
+         ╵                                  ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngStyle' since it isn't a known property of 'span'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:54:34:
+      54 │ ...core-dot" [ngStyle]="{'background': (score.score >=30 ? palette...
+         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngStyle' since it isn't a known property of 'div'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:86:33:
+      86 │ ...ght-card" [ngStyle]="{'border-left': '6px solid '+getInsight()....
+         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngStyle' since it isn't a known property of 'h3'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:87:10:
+      87 │       <h3 [ngStyle]="{'color': getInsight().color}">{{ getInsight(...
+         ╵           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:13:15:
+      13 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
