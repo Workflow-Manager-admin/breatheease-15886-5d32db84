@@ -994,3 +994,26 @@ Application bundle generation failed. [3.167 seconds]
 
 
 ❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [3.443 seconds]
+
+▲ [WARNING] TS-998113: RouterOutlet is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:11:12:
+      11 │   imports: [RouterOutlet, BreatheEaseMainComponent],
+         ╵             ~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'Date' does not exist on type 'BreatheEaseMainComponent'. [plugin angular-compiler]
+
+    src/app/breathe-ease-main.component.html:35:55:
+      35 │ ...-timer">{{ (testStartTime ? ((Date.now()-testStartTime)/1000).t...
+         ╵                                  ~~~~
+
+  Error occurs in the template of component BreatheEaseMainComponent.
+
+    src/app/breathe-ease-main.component.ts:16:15:
+      16 │   templateUrl: './breathe-ease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
