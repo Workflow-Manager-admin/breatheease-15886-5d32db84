@@ -1,0 +1,92 @@
+<!-- BreatheEase Main Container UI: Light theme, clean layout -->
+<div class="be-main" [ngStyle]="{'background': palette.secondary, 'color': palette.primary}">
+  <nav class="be-nav">
+    <button class="be-nav-btn" [class.active]="currentTab==='test'" (click)="switchTab('test')">BOLT Test</button>
+    <button class="be-nav-btn" [class.active]="currentTab==='history'" (click)="switchTab('history')">History</button>
+    <button class="be-nav-btn" [class.active]="currentTab==='insights'" (click)="switchTab('insights')">Insights</button>
+  </nav>
+
+  <!-- Main Content, tabbed -->
+  <section *ngIf="currentTab==='test'" class="be-section">
+    <div *ngIf="testStep === 'intro'" class="be-block center">
+      <h1>BreatheEase</h1>
+      <p class="subtitle">Body Oxygen Level Test (BOLT)</p>
+      <button class="be-primary" (click)="startTest()">Start Test</button>
+    </div>
+    <div *ngIf="testStep === 'instructions'" class="be-block">
+      <h2>Test Instructions</h2>
+      <ol>
+        <li>Sit upright and relax.</li>
+        <li>Take a normal, calm breath in and out through your nose.</li>
+        <li>After exhaling, pinch your nose and start the timer.</li>
+        <li>Hold until you feel the first urge to breathe (not as long as possible!).</li>
+        <li>Release your nose and breathe normally. <br><i>(This is your BOLT score in seconds.)</i></li>
+      </ol>
+      <button class="be-accent" (click)="beginCountdown()">Got it, start countdown</button>
+    </div>
+    <div *ngIf="testStep==='countdown'" class="be-block center">
+      <h2>Get Ready!</h2>
+      <div class="countdown">{{ countdown }}</div>
+      <p>Prepare for the test...</p>
+    </div>
+    <div *ngIf="testStep==='hold'" class="be-block center">
+      <h2>Hold Your Breath</h2>
+      <p>
+        <span class="bolt-timer">{{ (testStartTime ? ((Date.now()-testStartTime)/1000).toFixed(1) : '0.0') }}s</span>
+      </p>
+      <button class="be-accent" (click)="finishTest()">Stop (I felt the urge)</button>
+      <p class="tip">Press when you feel the first definite urge to breathe.</p>
+    </div>
+    <div *ngIf="testStep==='result'" class="be-block center">
+      <h2>Your BOLT Score:</h2>
+      <div class="bolt-score">{{ boltResult }} <span>seconds</span></div>
+      <button class="be-primary" (click)="saveScore()">Save Score</button>
+      <p class="tip"><i>Saved scores will appear in your history.</i></p>
+    </div>
+  </section>
+
+  <section *ngIf="currentTab==='history'" class="be-section">
+    <h2>History & Progress</h2>
+    <div *ngIf="boltScores.length > 0; else noScores">
+      <div class="be-history-list">
+        <div *ngFor="let score of boltScores" class="be-history-item">
+          <span class="score-label">{{score.date}}</span>
+          <span class="score-dot" [ngStyle]="{'background': (score.score >=30 ? palette.accent : palette.primary)}"></span>
+          <span class="score-value">{{score.score}}s</span>
+        </div>
+      </div>
+      <div class="be-graph-wrap">
+        <!-- Simple graph (SVG bars, no library dependency) -->
+        <svg viewBox="0 0 220 80" class="be-history-graph">
+          <g *ngIf="chartData.length">
+            <ng-container *ngFor="let score of chartData; index as i">
+              <rect [attr.x]="20+i*35" 
+                    [attr.y]="(80-score*2.5)" 
+                    width="20" 
+                    [attr.height]="score*2.5" 
+                    [attr.fill]="score >=30 ? palette.accent : palette.primary"/>
+              <text [attr.x]="30+i*35" 
+                    y="75" 
+                    text-anchor="middle" font-size="10" fill="#555">{{chartLabels[i]}}</text>
+              <text [attr.x]="30+i*35" 
+                    [attr.y]="(80-score*2.5-5)" 
+                    text-anchor="middle" font-size="9" fill="#333">{{score}}</text>
+            </ng-container>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ng-template #noScores>
+      <p>No scores yet. Complete a test and save your first score!</p>
+    </ng-template>
+  </section>
+
+  <section *ngIf="currentTab==='insights'" class="be-section">
+    <h2>BOLT Health Insights</h2>
+    <div class="be-insight-card" [ngStyle]="{'border-left': '6px solid '+getInsight().color}">
+      <h3 [ngStyle]="{'color': getInsight().color}">{{ getInsight().title }}</h3>
+      <p>{{ getInsight().message }}</p>
+    </div>
+    <p class="secondary-tip">Repeat the BOLT daily — Track your journey and compare improvement over time!</p>
+  </section>
+</div>
