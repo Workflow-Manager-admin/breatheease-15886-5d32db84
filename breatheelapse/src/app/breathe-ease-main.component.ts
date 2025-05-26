@@ -1,5 +1,6 @@
 /* global window, clearInterval */
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 /**
  * BreatheEase Main Container Component
@@ -10,6 +11,8 @@ import { Component } from '@angular/core';
 // PUBLIC_INTERFACE
 @Component({
   selector: 'breathe-ease-main',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './breathe-ease-main.component.html',
   styleUrls: ['./breathe-ease-main.component.css']
 })
